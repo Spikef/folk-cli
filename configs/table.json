@@ -1,0 +1,136 @@
+{
+  "settings": [
+    "id identity primary key",
+    "blog_name nvarchar(255) null",
+    "blog_title nvarchar(255) null",
+    "blog_copyright nvarchar(255) null",
+    "blog_keywords ntext null",
+    "blog_description ntext null",
+    "blog_status short null default(0)",
+    "blog_art_cut_count short null default(300)",
+    "blog_art_relative_count short null default(0)",
+    "blog_art_page_size short null default(10)",
+    "blog_art_sort_type short null default(0)",
+    "blog_language_auto bit default(0)",
+    "blog_language_name nvarchar(255) null",
+    "blog_static_mode short null default(0)",
+    "blog_app_key nvarchar(255) null",
+    "blog_app_token nvarchar(255) null"
+  ],
+  "navigator": [
+    "nav_id identity primary key",
+    "nav_name nvarchar(255) null",
+    "nav_type short null default(0)",
+    "nav_link nvarchar(255) null",
+    "nav_order short null default(9)"
+  ],
+  "categorys": [
+    "cate_id identity primary key",
+    "cate_name nvarchar(255) null",
+    "cate_desc nvarchar(255) null",
+    "cate_count int null default(0)",
+    "cate_order short null default(9)"
+  ],
+  "articles": [
+    "art_id identity primary key",
+    "art_title nvarchar(255) null",
+    "art_summary ntext null",
+    "art_content ntext null",
+    "art_cate short null",
+    "art_tags nvarchar(255) null",
+    "art_type short null default(0)",
+    "art_alias nvarchar(255) null",
+    "art_cover nvarchar(255) null",
+    "art_keywords nvarchar(255) null",
+    "art_description nvarchar(255) null",
+    "art_author int not null",
+    "art_post_time datetime null",
+    "art_last_time datetime null",
+    "art_comment_count int null default(0)",
+    "art_visit_count int null default(0)",
+    "art_like_count int null default(0)",
+    "art_longitude nvarchar(255) null",
+    "art_latitude nvarchar(255) null",
+    "art_location nvarchar(255) null",
+    "art_editor nvarchar(255) null"
+  ],
+  "tags": [
+    "tag_id identity primary key",
+    "tag_name nvarchar(255) null",
+    "art_count int null default(0)",
+    "art_ids ntext null"
+  ],
+  "members": [
+    "user_id identity primary key",
+    "user_name nvarchar(255) null",
+    "user_nick nvarchar(255) null",
+    "user_mail nvarchar(255) null",
+    "user_mobile nvarchar(255) null",
+    "user_website nvarchar(255) null",
+    "user_sex short null default(0)",
+    "user_avatar nvarchar(255) null",
+    "user_birthday datetime null",
+    "user_address nvarchar(255) null",
+    "user_forbid bit null default(0)",
+    "user_salt nvarchar(64) null",
+    "user_hashkey nvarchar(64) null",
+    "user_group short null default(0)",
+    "user_article_count int null default(0)",
+    "user_comment_count int null default(0)",
+    "user_login_date datetime null",
+    "user_login_local nvarchar(255) null",
+    "user_cloud_openid nvarchar(50) null",
+    "user_cloud_expire datetime null",
+    "user_cloud_token nvarchar(50) null",
+    "user_cloud_refresh nvarchar(50) null"
+  ],
+  "limits": [
+    "limit_id identity primary key",
+    "limit_mark nvarchar(255) null",
+    "limit_name nvarchar(255) null",
+    "limit_desc nvarchar(255) null",
+    "limit_system bit null default(0)"
+  ],
+  "groups": [
+    "group_id identity primary key",
+    "group_name nvarchar(255) null",
+    "group_desc nvarchar(255) null",
+    "group_code ntext",
+    "group_system bit null default(0)"
+  ],
+  "themes": [
+    "theme_id identity primary key",
+    "theme_author nvarchar(255) null",
+    "theme_mark nvarchar(255) null",
+    "theme_name nvarchar(255) null",
+    "theme_mail nvarchar(255) null",
+    "theme_site nvarchar(255) null",
+    "theme_folder nvarchar(255) null",
+    "theme_version nvarchar(255) null",
+    "theme_default bit default(0)"
+  ],
+  "plugins": [
+    "plugin_id identity primary key",
+    "plugin_author nvarchar(255) null",
+    "plugin_mark nvarchar(255) null",
+    "plugin_name nvarchar(255) null",
+    "plugin_mail nvarchar(255) null",
+    "plugin_site nvarchar(255) null",
+    "plugin_folder nvarchar(255) null",
+    "plugin_version nvarchar(255) null",
+    "plugin_forbid bit default(0)"
+  ],
+  "params": [
+    "para_id identity primary key",
+    "para_key nvarchar(255) null",
+    "para_value ntext",
+    "para_target int null default(0)",
+    "para_format nvarchar(255) null",
+    "para_type short null default(0)"
+  ],
+  "hooks": [
+    "hook_id identity primary key",
+    "hook_mark nvarchar(255) null",
+    "hook_value ntext null"
+  ]
+}

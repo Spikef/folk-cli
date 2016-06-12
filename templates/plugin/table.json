@@ -1,0 +1,11 @@
+{
+    "demo": [
+        "demo_id identity primary key",
+        "demo_name nvarchar(255) null",
+        "demo_icon varchar(10) default('flag')",        
+        "demo_desc text not null",
+        "demo_date datetime not null",
+        "demo_hide int not null default(0)",
+        "demo_status bit null default(0)"
+    ]
+}

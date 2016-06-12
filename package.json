@@ -1,0 +1,34 @@
+{
+  "name": "folk-cli",
+  "description": "Folk command line tools for better development!",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Spikef/folk-cli.git"
+  },
+  "files": [
+    "lib",
+    "bin"
+  ],
+  "bin": {
+    "fo": "./bin/index.js"
+  },
+  "dependencies": {
+    "colors": "^1.1.2",
+    "commander": "^2.9.0",
+    "crypts": "^1.0.2",
+    "fo-pack": "0.0.3",
+    "fs-arm": "0.0.1",
+    "inquirer": "^1.0.3",
+    "jszip": "^2.6.0",
+    "semver": "^5.1.0",
+    "uglify-js": "^2.6.2"
+  },
+  "devDependencies": {},
+  "scripts": {},
+  "engine-strict": true,
+  "engines": {
+    "node": ">= 4.0"
+  },
+  "license": "MIT"
+}

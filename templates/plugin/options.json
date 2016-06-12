@@ -1,0 +1,75 @@
+{
+    "test1": {
+        "type": "text",
+        "desc": "username",
+        "value": ""
+    },
+    "test2": {
+        "type": "number",
+        "desc": "age",
+        "value": 10
+    },
+    "test3": {
+        "type": "password",
+        "desc": "password",
+        "value": "123456"
+    },
+    "test4": {
+        "type": "date",
+        "desc": "birthday",
+        "value": "2016-05-01"
+    },
+    "test5": {
+        "type": "time",
+        "desc": "time",
+        "value": "21:17"
+    },
+    "test6": {
+        "type": "color",
+        "desc": "color",
+        "value": "#FFFFFF",
+        "info": "some tips under the form control"
+    },
+    "test7": {
+        "type": "email",
+        "desc": "email",
+        "value": "mute@boot.cn"
+    },
+    "test8": {
+        "type": "url",
+        "desc": "homepage",
+        "value": "http://www.baidu.com"
+    },
+    "test9": {
+        "type": "textarea",
+        "desc": "introdution",
+        "value": "Hello, this is Folk, a great blog system.",
+        "info": "some tips under the form control"
+    },
+    "test10": {
+        "type": "select",
+        "desc": "Do you like Folk",
+        "value": false,
+        "info": "some tips under the form control",
+        "items": [
+            {"name": "Yes", "value": false},
+            {"name": "No", "value": true}
+        ]
+    },
+    "test11": {
+        "type": "select",
+        "desc": "How old are you",
+        "value": 2,
+        "items": [
+            {"name": "0", "value": 0},
+            {"name": "1", "value": 1},
+            {"name": "2", "value": 2}
+        ]
+    },
+    "test12": {
+        "type": "dynamic",
+        "desc": "List by function",
+        "value": 2,
+        "source": "function () {\n    var fs = blog.modules.fs;\n    var path = blog.modules.path;\n\n    var styles = [];\n    var folder = path.resolve(blog.vision, 'themes', blog.theme.folder, 'assets/styles');\n    if (fs.existsSync(folder)) {\n        fs.readdirSync(folder).forEach(function(item) {\n            if (fs.statSync(path.resolve(folder, item)).isDirectory()) {\n                styles.push({\n                    name: item,\n                    value: item\n                });\n            }\n        });\n    }\n\n    return styles;\n}"
+    }
+}

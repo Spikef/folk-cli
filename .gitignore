@@ -1,0 +1,6 @@
+.DS_Store
+.tern-project
+node_modules
+configs/global.json
+datas
+.idea

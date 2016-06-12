@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title><%=blog.name%> - <%=blog.title%></title>
+    <meta name="keywords" content="<%=blog.keywords%>">
+    <meta name="description" content="<%=blog.description%>" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="<%=blog.client%>system/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<%=blog.client%>system/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<%=theme.assets%>css/common.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="main"></div>
+
+        <div class="side"></div>
+    </div>
+    
+    <%=include footer.ejs%>
+</body>
+</html>

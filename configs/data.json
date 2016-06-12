@@ -1,0 +1,116 @@
+{
+    "navigator": [
+        {
+            "nav_name": "首页",
+            "nav_type": 0,
+            "nav_link": "home",
+            "nav_order": 0
+        }
+    ],
+    "limits": [
+        {
+            "limit_mark": "VisitWebsite",
+            "limit_name": "网站访问",
+            "limit_desc": "允许访问网站。",
+            "limit_system": true
+        },
+        {
+            "limit_mark": "ControlSystem",
+            "limit_name": "后台管理",
+            "limit_desc": "用户具有进入后台并控制后台功能的权限，是管理员的标志。",
+            "limit_system": true
+        },
+        {
+            "limit_mark": "ControlSuper",
+            "limit_name": "超级权限",
+            "limit_desc": "允许所有后台操作，是超级管理员的标志。",
+            "limit_system": true
+        },
+        {
+            "limit_mark": "ControlSetting",
+            "limit_name": "整站设置",
+            "limit_desc": "允许对网站参数进行设置。",
+            "limit_system": true
+        },
+        {
+            "limit_mark": "ControlNavigator",
+            "limit_name": "导航管理",
+            "limit_desc": "允许对网站导航进行设置。",
+            "limit_system": true
+        },
+        {
+            "limit_mark": "ControlCategory",
+            "limit_name": "分类管理",
+            "limit_desc": "允许对网站分类进行设置。",
+            "limit_system": true
+        },
+        {
+            "limit_mark": "ControlArticle",
+            "limit_name": "所有文章管理",
+            "limit_desc": "允许操作所有用户的文章。",
+            "limit_system": true
+        },
+        {
+            "limit_mark": "ControlArticleSelf",
+            "limit_name": "文章管理",
+            "limit_desc": "允许操作自己的文章。",
+            "limit_system": true
+        },
+        {
+            "limit_mark": "ControlUser",
+            "limit_name": "用户管理",
+            "limit_desc": "允许操作用户。",
+            "limit_system": true
+        },
+        {
+            "limit_mark": "ControlTheme",
+            "limit_name": "主题管理",
+            "limit_desc": "允许操作主题。",
+            "limit_system": true
+        },
+        {
+            "limit_mark": "ControlPlugin",
+            "limit_name": "插件管理",
+            "limit_desc": "允许操作插件。",
+            "limit_system": true
+        },
+        {
+            "limit_mark": "ControlGroup",
+            "limit_name": "分组管理",
+            "limit_desc": "允许操作分组。",
+            "limit_system": true
+        },
+        {
+            "limit_mark": "ControlLimit",
+            "limit_name": "权限管理",
+            "limit_desc": "允许操作权限。",
+            "limit_system": true
+        },
+        {
+            "limit_mark": "ControlUpload",
+            "limit_name": "上传文件",
+            "limit_desc": "允许上传文章图片。",
+            "limit_system": true
+        }
+    ],
+    "groups": [
+        {
+            "group_name": "超级管理员",
+            "group_desc": "最高权限的管理员, 可以进行所有操作",
+            "group_code": "[1,2,3]",
+            "group_system": true
+        },
+        {
+            "group_name": "普通会员",
+            "group_desc": "已登录用户, 只具有访问网站的权限",
+            "group_code": "[1]",
+            "group_system": false
+        },
+        {
+            "group_name": "游客",
+            "group_desc": "未登录用户，只具有访问网站的权限",
+            "group_code": "[1]",
+            "group_system": false
+        }
+    ]
+}

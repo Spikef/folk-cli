@@ -1,0 +1,16 @@
+{
+    "name": "folk-app",
+    "version": "0.0.1",
+    "description": "",
+    "author": {
+        "name": "",
+        "email": "",
+        "url": ""
+    },
+    "homepage": "",
+    "engines": {
+        "folk": ">=1.1.10",
+        "node": ">=0.10.0",
+        "nodeasp": ">=0.1.0"
+    }
+}
