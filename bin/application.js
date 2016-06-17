@@ -8,23 +8,23 @@
 
 const fs = require('fs-arm');
 const path = require('path');
+const app = require('cmdu');
 const console = require('../lib/console');
-const program = require('commander');
 const inquirer = require('inquirer');
 
 const cfgFile = path.resolve(__dirname, '../configs/global.json');
 
-program
+app
     .command('theme')
-    .description('Create a new theme.')
-    .action(() => app('theme'));
+    .describe('Create a new theme.')
+    .action(() => application('theme'));
 
-program
+app
     .command('plugin')
-    .description('Create a new plugin')
-    .action(() => app('plugin'));
+    .describe('Create a new plugin')
+    .action(() => application('plugin'));
 
-function app(mode) {
+function application(mode) {
     let configs = fs.existsSync(cfgFile) ? require(cfgFile) : {};
 
     if (!configs.work || !fs.existsSync(path.resolve(configs.work, 'vision'))) {

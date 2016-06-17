@@ -8,15 +8,15 @@
 
 const fs = require('fs-arm');
 const path = require('path');
+const app = require('cmdu');
 const console = require('../lib/console');
-const program = require('commander');
 const inquirer = require('inquirer');
 
 const cfgFile = path.resolve(__dirname, '../configs/global.json');
 
-program
-    .command('language')
-    .description('Get all Chinese characters from source code for building language package.')
+app
+    .command('language', {noHelp: true})
+    .describe('Get all Chinese characters from source code for building language package.')
     .action(() => {
         let configs = fs.existsSync(cfgFile) ? require(cfgFile) : {};
 

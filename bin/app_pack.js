@@ -8,8 +8,8 @@
 
 const fs = require('fs-arm');
 const path = require('path');
+const app = require('cmdu');
 const console = require('../lib/console');
-const program = require('commander');
 const inquirer = require('inquirer');
 const crypts = require('crypts');
 const pack = require('fo-pack');
@@ -24,9 +24,9 @@ const Types = {
 const folders = {[Types.THEME]: 'themes', [Types.PLUGIN]: 'plugins'};
 const markers = {[Types.THEME]: 'T', [Types.PLUGIN]: 'P'};
 
-program
+app
     .command('pack')
-    .description('Pack theme or plugin to folk installation package.')
+    .describe('Pack theme or plugin to folk installation package.')
     .action(() => {
         let configs = fs.existsSync(cfgFile) ? require(cfgFile) : {};
 

@@ -4,16 +4,13 @@
 
 const fs = require('fs-arm');
 const path = require('path');
+const app = require('cmdu');
 const console = require('../lib/console');
-const program = require('commander');
 const inquirer = require('inquirer');
 
-const version = require('../package.json').version;
 const cfgFile = path.resolve(__dirname, '../configs/global.json');
 
-program
-    .version(version, '-v, --version')
-    .parse(process.argv);
+app.version = require('../package.json').version;
 
 if (!fs.existsSync(cfgFile)) {
     if (!~process.argv.indexOf('init')) {
@@ -22,9 +19,16 @@ if (!fs.existsSync(cfgFile)) {
     }
 }
 
-program
+app.action(function (options) {
+    if (!options.help && !options.version) {
+        var spawn = require('child_process').spawnSync;
+        spawn('fo', ['--help'], {stdio: 'inherit'});
+    }
+});
+
+app
     .command('init')
-    .description('Initialize configuration settings for fo!')
+    .describe('Initialize configuration settings for fo!')
     .action(() => {
         let configs = fs.existsSync(cfgFile) ? require(cfgFile) : {};
         let questions = [
@@ -70,4 +74,4 @@ require('./language');
 require('./translate');
 require('./build');
 
-program.parse(process.argv);
+app.listen();

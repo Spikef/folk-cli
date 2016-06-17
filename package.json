@@ -1,7 +1,7 @@
 {
   "name": "folk-cli",
   "description": "Folk command line tools for better development!",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": {
     "type": "git",
     "url": "git@github.com:Spikef/folk-cli.git"
@@ -14,8 +14,8 @@
     "fo": "./bin/index.js"
   },
   "dependencies": {
+    "cmdu": "^1.0.0",
     "colors": "^1.1.2",
-    "commander": "^2.9.0",
     "crypts": "^1.0.2",
     "fo-pack": "0.0.3",
     "fs-arm": "0.0.1",

@@ -8,7 +8,7 @@
 
 const fs = require('fs-arm');
 const path = require('path');
-const program = require('commander');
+const app = require('cmdu');
 const inquirer = require('inquirer');
 const crypts = require('crypts');
 const pack = require('fo-pack');
@@ -20,11 +20,12 @@ const compress = require('../lib/compress');
 
 const cfgFile = path.resolve(__dirname, '../configs/global.json');
 
-program
-    .command('build [mode]')
+app
+    .command('build [mode]', {noHelp: true})
+    .describe('Build the installation package.')
+    .describe('mode', 'Release [asp] or [node]')
     .option('-d, --debug', 'Whether build the debug package or not')
     .option('-u, --update', 'Whether build the upgrade package or not')
-    .description('Build the installation package.')
     .action((mode, options) => {
         mode = /a/.test(mode) ? 'asp' : 'node';
         options.debug = !!options.debug;

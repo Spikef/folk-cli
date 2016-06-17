@@ -8,15 +8,15 @@
 
 const fs = require('fs-arm');
 const path = require('path');
+const app = require('cmdu');
 const console = require('../lib/console');
-const program = require('commander');
 const inquirer = require('inquirer');
 
 const cfgFile = path.resolve(__dirname, '../configs/global.json');
 
-program
-    .command('translate')
-    .description('Build language package from translated texts.')
+app
+    .command('translate', {noHelp: true})
+    .describe('Build language package from translated texts.')
     .action(() => {
         let configs = fs.existsSync(cfgFile) ? require(cfgFile) : {};
 
