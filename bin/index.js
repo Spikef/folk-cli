@@ -21,8 +21,7 @@ if (!fs.existsSync(cfgFile)) {
 
 app.action(function (options) {
     if (!options.help && !options.version) {
-        var spawn = require('child_process').spawnSync;
-        spawn('fo', ['--help'], {stdio: 'inherit'});
+        this.showHelp();
     }
 });
 
@@ -70,8 +69,5 @@ app
 
 require('./application');
 require('./app_pack');
-require('./language');
-require('./translate');
-require('./build');
 
 app.listen();
