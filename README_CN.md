@@ -21,7 +21,7 @@ $ npm install -g folk-cli
 设置网站位置, 以及主题/插件作者信息等。
 
 ```bash
-$ cd [your website location]
+$ cd [你网站所在文件夹]
 $ folk init
 ```
 
@@ -43,7 +43,7 @@ $ folk theme
 
 ### pack
 
-Pack a theme or plugin to an installation package.
+打包主题或者插件为安装包。
 
 ```bash
 $ folk pack
